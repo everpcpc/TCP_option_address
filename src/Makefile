@@ -8,7 +8,7 @@ default:
 	make CONFIG_TOA=m  -C /lib/modules/`uname -r`/build M=`pwd` modules
 
 debug:
-	make CONFIG_TOA=m  -C /lib/modules/`uname -r`/build M=`pwd` modules EXTRA_CFLAGS="-DTOA_DBG_MSG"
+	make CONFIG_TOA=m  -C /lib/modules/`uname -r`/build M=`pwd` modules EXTRA_CFLAGS="-DTOA_DEBUG_ENABLE"
 clean:
 	rm -f .*.cmd *.o *.ko *.mod.c modules.order Module.symvers
 	rm -rf .tmp_versions
