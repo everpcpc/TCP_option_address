@@ -10,7 +10,7 @@ default:
 debug:
 	make CONFIG_TOA=m  -C /lib/modules/`uname -r`/build M=`pwd` modules EXTRA_CFLAGS="-DTOA_DEBUG_ENABLE"
 clean:
-	rm -f .*.cmd *.o *.o.d *.ko *.mod.c modules.order Module.symvers
+	rm -f .*.cmd *.o *.o.d *.ko *.mod.c *.mod modules.order Module.symvers
 	rm -rf .tmp_versions
 install:
 	test -d "$(DESTDIR)/lib/modules/`uname -r`/extra/net/toa" \
